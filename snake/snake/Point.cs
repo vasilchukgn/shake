@@ -20,13 +20,19 @@ namespace snake
         {
             this.x = x;
             this.y = y;
-            this.sym = sym;
+            this.sym = sym;            
         }
 
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public void Move(int dx, int dy)
+        {
+            x += dx;
+            y += dy;
         }
 
     }

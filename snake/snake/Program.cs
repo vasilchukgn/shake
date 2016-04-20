@@ -16,7 +16,15 @@ namespace snake
 
             p1.Draw();
             p2.Draw();
-            
+
+            Console.ReadLine();
+
+            p1.Move(5, 5);
+            p2.Move(10, 10);
+
+            p1.Draw();
+            p2.Draw();
+
             Console.ReadLine();
         }
     }
