@@ -11,12 +11,14 @@ namespace snake
         public int x;
         public int y;
         public char sym;
+        public String color;
 
-        public Point(int x, int y, char sym)
+        public Point(int x, int y, char sym, String color)
         {
             this.x = x;
             this.y = y;
-            this.sym = sym;            
+            this.sym = sym;
+            this.color = color;
         }
 
         public Point(Point p)
@@ -24,11 +26,19 @@ namespace snake
             x = p.x;
             y = p.y;
             sym = p.sym;
+            color = p.color;
         }
         
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
+            if (color == "Red")
+                Console.ForegroundColor = ConsoleColor.Red;
+            if (color == "Green")
+                Console.ForegroundColor = ConsoleColor.Green;
+            if (color == "White")
+                Console.ForegroundColor = ConsoleColor.White;
+
             Console.Write(sym);
         }
 
