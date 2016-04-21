@@ -10,6 +10,8 @@ namespace snake
     {
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
+            Console.SetBufferSize(120, 30);
             Console.SetWindowSize(120, 30);
 
             // Отрисовка рамки
@@ -28,6 +30,9 @@ namespace snake
 
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
+            snake.Move();
+            System.Threading.Thread.Sleep(300);
+            snake.Move();
 
             Console.ReadLine();
         }
