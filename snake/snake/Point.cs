@@ -54,7 +54,7 @@ namespace snake
             }
             else if (direction == Direction.DOWN)
             {
-                x += offset;
+                y += offset;
             }
         }
 
